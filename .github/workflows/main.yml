@@ -1,0 +1,36 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: install dependencies
+        run: yarn install
+
+      - name: package
+        run: yarn build
+
+      - name: deploy
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./dist/*
+          host: ${{ secrets.SSH_HOST }}
+          remote: ${{ secrets.SSH_DIR }}
+          port: ${{ secrets.SSH_PORT }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+
