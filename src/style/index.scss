@@ -1,0 +1,35 @@
+@import "reset";
+
+body {
+  font-family: "Helvetica Neue", Helvetica,
+  "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei",
+  "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  font-size: 14px;
+  background: #36C5C2;
+  background: -webkit-radial-gradient(bottom left, #36C5C2, #B45DDF);
+  background: -moz-radial-gradient(bottom left, #36C5C2, #B45DDF);
+  background: radial-gradient(to top right, #36C5C2, #B45DDF);
+}
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.Menu {
+  background-color: transparentize(#000, 0.4);
+  min-width: 200px;
+
+
+  &-item {
+    font-size: 16px;
+    color: transparentize(#fff, 0.2);
+    padding: 12px;
+    &:hover {
+      cursor: pointer;
+      background-color: transparentize(#000, .8);
+    }
+  }
+}

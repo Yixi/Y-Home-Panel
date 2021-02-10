@@ -1,8 +1,12 @@
 import * as React from 'react'
+import {RecoilRoot} from 'recoil'
+import Titan from './Components/Titan'
 
 function App() {
   return (
-    <div>Panel is in building....</div>
+    <RecoilRoot>
+      <Titan/>
+    </RecoilRoot>
   )
 }
 
