@@ -1,11 +1,11 @@
 import * as React from 'react'
 import {RecoilRoot} from 'recoil'
-import Titan from './Components/Titan'
+import Links from './Components/Links'
 
 function App() {
   return (
     <RecoilRoot>
-      <Titan/>
+      <Links/>
     </RecoilRoot>
   )
 }

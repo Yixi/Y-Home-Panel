@@ -4,4 +4,3 @@ dist
 .cache
 .parcel-cache
 .DS_Store
-config/config.ts
