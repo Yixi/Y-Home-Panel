@@ -19,6 +19,11 @@ export default [
     url: 'http://192.168.50.9:8080/'
   },
   {
+    image: 'http://192.168.50.3:9090/ui/assets/logo.b453e72f.png',
+    name: 'OpenClash',
+    url: 'http://192.168.50.3:9090/ui/#/proxies'
+  },
+  {
     image: 'http://192.168.50.9:6880/touchicon.png',
     name: 'AiraNg',
     url: 'http://192.168.50.9:6880/'
