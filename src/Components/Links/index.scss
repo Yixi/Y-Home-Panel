@@ -6,12 +6,15 @@
 
   &-item {
     position: relative;
-    width: 325px;
+    width: calc((100% - 24px * 2) / 3);
     display: inline-block;
-    background: rgba(255,255,255,.8);
+    background: rgba(255, 255, 255, .8);
     border-radius: 4px;
-    box-shadow: 0 0 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
     margin-right: 24px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     &-img {
       position: absolute;
@@ -36,5 +39,21 @@
       margin-top: 24px;
     }
 
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .Links-item {
+    width: calc((100% - 24px) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Links-item {
+    width: 100%;
   }
 }

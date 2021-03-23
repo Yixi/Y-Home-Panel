@@ -39,6 +39,11 @@ export default [
     url: 'http://192.168.50.9:8123'
   },
   {
+    image: 'http://192.168.50.10:5000/webman/resources/images/icon_dsm_96.png?v=4398',
+    name: 'DSM NAS',
+    url: 'http://192.168.50.10'
+  },
+  {
     image: 'http://192.168.50.9:1880/favicon.ico',
     name: 'Node red',
     url: 'http://192.168.50.9:1880'
@@ -54,8 +59,23 @@ export default [
     url: 'http://192.168.50.7:8111'
   },
   {
-    image: 'http://192.168.50.10:5000/webman/resources/images/icon_dsm_96.png?v=4398',
-    name: 'DSM NAS',
-    url: 'http://192.168.50.10'
+    image:'http://192.168.50.40/images/favicon.png',
+    name: '书房 AP',
+    url: 'http://192.168.50.40'
+  },
+  {
+    image: 'http://192.168.50.41/images/favicon.png',
+    name: '楼梯 AP',
+    url: 'http://192.168.50.41'
+  },
+  {
+    image: 'http://192.168.50.5/favicon.ico',
+    name: '弱电交换机',
+    url: 'http://192.168.50.5'
+  },
+  {
+    image: 'http://192.168.50.6/favicon.ico',
+    name: '客厅交换机',
+    url: 'http://192.168.50.6'
   }
 ]
