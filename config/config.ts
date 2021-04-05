@@ -39,9 +39,9 @@ export default [
     url: 'http://192.168.50.9:8123'
   },
   {
-    image: 'http://192.168.50.10:5000/webman/resources/images/icon_dsm_96.png?v=4398',
+    image: 'http://192.168.50.4:5000/webman/resources/images/icon_dsm_96.png?v=4398',
     name: 'DSM NAS',
-    url: 'http://192.168.50.10'
+    url: 'http://192.168.50.4'
   },
   {
     image: 'http://192.168.50.9:1880/favicon.ico',
@@ -57,6 +57,11 @@ export default [
     image: 'http://192.168.50.7:8111/img/icons/apple-touch-icon-180x180.png',
     name: 'Team City',
     url: 'http://192.168.50.7:8111'
+  },
+  {
+    image: 'http://192.168.50.7:8999/images/apple-icon-180x180.png',
+    name: 'Pi gateway NetData',
+    url: 'http://192.168.50.7:8999'
   },
   {
     image:'http://192.168.50.40/images/favicon.png',
@@ -77,5 +82,10 @@ export default [
     image: 'http://192.168.50.6/favicon.ico',
     name: '客厅交换机',
     url: 'http://192.168.50.6'
-  }
+  },
+  {
+    image: 'http://192.168.50.10:5000/webman/resources/images/icon_dsm_96.png?v=4398',
+    name: 'PVE-DSM-NAS',
+    url: 'http://192.168.50.10'
+  },
 ]
