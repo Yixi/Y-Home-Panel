@@ -66,6 +66,7 @@ module.exports = {
       '@root': path.resolve(__dirname, '../src'),
     },
     fallback: {
+      'buffer': require.resolve('buffer/'),
       'stream': require.resolve('stream-browserify'),
       'crypto': require.resolve('crypto-browserify')
     },
