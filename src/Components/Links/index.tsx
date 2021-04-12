@@ -1,7 +1,7 @@
 import * as React from 'react'
+import * as Parse from 'parse'
 import './index.scss'
 import {useEffect, useState} from 'react'
-import Parse from 'parse'
 
 type Link = {
   name: string,
