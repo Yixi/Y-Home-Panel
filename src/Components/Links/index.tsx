@@ -1,22 +1,38 @@
 import * as React from 'react'
-import config, {Config} from '../../config'
 import './index.scss'
+import {useEffect, useState} from 'react'
+import Parse from 'parse'
 
+type Link = {
+  name: string,
+  url: string,
+  image: string
+}
 
-const Link: React.FC<{ config: Config }> = (props) => {
+const Link: React.FC<{ config: Parse.Object<Link> }> = (props) => {
   return (
     <div className="Links-item">
-      <span className="Links-item-img" style={{backgroundImage: `url(${props.config.image})`}} />
-      <a href={props.config.url} target='_blank'>{props.config.name}</a>
+      <span className="Links-item-img" style={{backgroundImage: `url(${props.config.get('image')})`}}/>
+      <a href={props.config.get('url')} target='_blank'>{props.config.get('name')}</a>
     </div>
   )
 }
 
 const Links: React.FC = () => {
+  const [links, setLinks] = useState<Parse.Object<Link>[]>([])
+
+  useEffect(() => {
+    const query = new Parse.Query<Parse.Object<Link>>('HomeLinks')
+    query.find().then((result) => {
+      setLinks(result)
+    })
+  }, [])
+
+
   return (
     <div className="Links-wrapper">
       <div className='Links'>
-        {config.map((c, i) => <Link config={c} key={i}/>)}
+        {links.map(l => (<Link config={l} key={l.id}/>))}
       </div>
     </div>
   )
