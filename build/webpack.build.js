@@ -4,10 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.tsx',
   output: {
-    filename: 'app.js',
+    filename: "[name]-[hash:7].js",
+    chunkFilename: "[chunkhash].js",
     path: path.join(__dirname, '../dist'),
   },
   module: {
@@ -53,6 +54,11 @@ module.exports = {
         use: ['url-loader'],
       },
     ]
+  },
+  optimization: {
+    splitChunks: {
+      maxSize: 300000
+    }
   },
   stats: {
     cached: true,
